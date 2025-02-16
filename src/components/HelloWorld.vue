@@ -51,8 +51,22 @@ const msgType = ref('refuse')
 
 <template>
   <div class="greetings">
-    <img v-if="refuseCount<4" alt="Hello Kitty" class="logo" src="/images/开心.png" width="125" height="125" />
-    <img v-if="refuseCount>=4" alt="Hello Kitty" class="logo" src="/images/不开心歪头.png" width="125" height="125" />
+    <img
+      v-if="refuseCount < 4"
+      alt="Hello Kitty"
+      class="logo"
+      src="../assets/开心.png"
+      width="125"
+      height="125"
+    />
+    <img
+      v-if="refuseCount >= 4"
+      alt="Hello Kitty"
+      class="logo"
+      src="../assets/不开心歪头.png"
+      width="125"
+      height="125"
+    />
     <!-- <img v-if="receiveCount>=4" alt="Hello Kitty" class="logo" src="/public/开心歪头.jpeg" width="125" height="125" /> -->
 
     <h1 v-if="msgType === 'refuse' && refuseCount < 4">{{ refuseMsg[refuseCount] }}</h1>
